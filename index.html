@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Taller</title>
+  <meta name="author" content="Farid Cotera">
+  <meta name="description" content="Taller 3 de maquetación web con navegación básica.">
+  <meta name="theme-color" content="#0A0A0A">
+
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ── Base ─────────────────────────────────────────── */
+    :root {
+      --red-primary:  #C0392B;
+      --red-hover:    #E74C3C;
+      --surface:      #1A1A1A;
+      --surface-2:    #242424;
+      --border:       #2C2C2C;
+      --text-main:    #F5F5F5;
+      --text-muted:   #8A8A8A;
+      --bg:           #0A0A0A;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* ── Navbar ───────────────────────────────────────── */
+    .navbar {
+      background: #0D0D0D !important;
+      border-bottom: 1px solid var(--border);
+      padding: 0.65rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1030;
+    }
+
+    .navbar-brand span {
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.04em;
+      color: var(--text-main);
+    }
+
+    .navbar-brand img {
+      filter: brightness(0) invert(1);
+      opacity: 0.9;
+    }
+
+    /* nav links */
+    .navbar-nav .nav-link {
+      color: var(--text-muted) !important;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.5rem 0.9rem !important;
+      border-left: 2px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+      color: var(--text-main) !important;
+      border-left-color: var(--red-primary);
+    }
+
+    .navbar-nav .nav-link i {
+      margin-right: 5px;
+      font-size: 0.78rem;
+      color: var(--red-primary);
+    }
+
+    /* dropdown */
+    .navbar-nav .dropdown-menu {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-top: 2px solid var(--red-primary);
+      border-radius: 4px;
+      padding: 0.4rem 0;
+      min-width: 180px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+      margin-top: 4px;
+    }
+
+    .dropdown-item {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 0.55rem 1rem;
+      border-left: 2px solid transparent;
+      transition: color 0.15s, background 0.15s, border-color 0.15s;
+    }
+
+    .dropdown-item i {
+      color: var(--red-primary);
+      margin-right: 8px;
+      font-size: 0.78rem;
+    }
+
+    .dropdown-item:hover {
+      background: var(--surface-2);
+      color: var(--text-main);
+      border-left-color: var(--red-primary);
+    }
+
+    /* toggler */
+    .navbar-toggler {
+      border-color: var(--border);
+      padding: 4px 8px;
+    }
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23F5F5F5' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    /* ── Hero Carousel ────────────────────────────────── */
+    #inicio {
+      padding-top: 2rem;
+      padding-bottom: 0;
+    }
+
+    .carousel-inner {
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .carousel-item img {
+      height: 420px;
+      object-fit: cover;
+      filter: brightness(0.75);
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: rgba(192, 57, 43, 0.7);
+      border-radius: 50%;
+      padding: 14px;
+      background-size: 55%;
+    }
+
+    .carousel-indicators [data-bs-slide-to] {
+      background-color: var(--red-primary);
+      opacity: 0.45;
+      width: 24px;
+      height: 3px;
+      border-radius: 2px;
+    }
+
+    .carousel-indicators .active {
+      opacity: 1;
+    }
+
+    /* ── Welcome strip ────────────────────────────────── */
+    .welcome-strip {
+      padding: 2.8rem 0 2rem;
+      text-align: center;
+    }
+
+    .welcome-strip h2 {
+      font-size: 1.55rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.35rem;
+    }
+
+    .welcome-strip h2 span {
+      color: var(--red-primary);
+    }
+
+    .welcome-strip p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      font-weight: 300;
+    }
+
+    /* ── Info columns ─────────────────────────────────── */
+    #info {
+      margin-bottom: 3rem;
+    }
+
+    .info-card {
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.75rem;
+      height: 100%;
+      transition: border-color 0.2s;
+    }
+
+    .info-card:hover {
+      border-color: var(--red-primary);
+    }
+
+    .info-card.dark   { background: var(--surface); }
+    .info-card.accent { background: var(--red-primary); }
+    .info-card.light  { background: var(--surface-2); }
+
+    .info-card h3 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.85rem;
+    }
+
+    .info-card p {
+      font-size: 0.84rem;
+      color: rgba(245,245,245,0.7);
+      margin-bottom: 0;
+    }
+
+    .info-card.accent p { color: rgba(255,255,255,0.85); }
+
+    /* ── Services / Cards ─────────────────────────────── */
+    #servicios { margin-bottom: 3rem; }
+
+    #servicios h2 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 1.8rem;
+    }
+
+    #servicios h2::after {
+      content: '';
+      display: block;
+      width: 36px;
+      height: 2px;
+      background: var(--red-primary);
+      margin: 0.5rem auto 0;
+    }
+
+    .service-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+      height: 100%;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .service-card:hover {
+      border-color: var(--red-primary);
+      transform: translateY(-3px);
+    }
+
+    .service-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      filter: brightness(0.8);
+      display: block;
+    }
+
+    .service-card-body {
+      padding: 1.1rem 1.2rem 1.3rem;
+    }
+
+    .service-card-body h4 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.5rem;
+    }
+
+    .service-card-body p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 0.9rem;
+    }
+
+    .btn-red {
+      background: var(--red-primary);
+      color: #fff;
+      border: none;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.42rem 1rem;
+      border-radius: 3px;
+      text-decoration: none;
+      transition: background 0.2s;
+      display: inline-block;
+    }
+
+    .btn-red:hover {
+      background: var(--red-hover);
+      color: #fff;
+    }
+
+    /* ── Collapse info ────────────────────────────────── */
+    #contacto { margin-bottom: 3rem; }
+
+    #contacto h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.3rem;
+    }
+
+    #contacto > .container > p,
+    .section-subhead {
+      color: var(--text-muted);
+      font-size: 0.84rem;
+    }
+
+    .btn-outline-red {
+      border: 1px solid var(--red-primary);
+      color: var(--red-primary);
+      background: transparent;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.45rem 1.1rem;
+      border-radius: 3px;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .btn-outline-red:hover {
+      background: var(--red-primary);
+      color: #fff;
+    }
+
+    #collapseInfo .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.84rem;
+      border-radius: 5px;
+    }
+
+    /* ── Contact form ─────────────────────────────────── */
+    .form-section { margin-bottom: 3rem; }
+
+    .form-section h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1.6rem;
+    }
+
+    .form-section h2::after {
+      content: '';
+      display: block;
+      width: 30px;
+      height: 2px;
+      background: var(--red-primary);
+      margin: 0.45rem auto 0;
+    }
+
+    .form-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.35rem;
+    }
+
+    .form-control {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text-main);
+      border-radius: 4px;
+      font-size: 0.85rem;
+      padding: 0.55rem 0.85rem;
+      transition: border-color 0.2s;
+    }
+
+    .form-control:focus {
+      background: var(--surface-2);
+      border-color: var(--red-primary);
+      color: var(--text-main);
+      box-shadow: 0 0 0 3px rgba(192,57,43,0.15);
+    }
+
+    .form-control::placeholder { color: var(--text-muted); opacity: 0.6; }
+
+    .form-check-input {
+      background-color: var(--surface);
+      border-color: var(--border);
+    }
+
+    .form-check-input:checked {
+      background-color: var(--red-primary);
+      border-color: var(--red-primary);
+    }
+
+    .form-check-label {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    /* ── Section headings helper ──────────────────────── */
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      text-align: center;
+      margin-bottom: 0.3rem;
+    }
+
+    /* ── Footer ───────────────────────────────────────── */
+    footer {
+      background: #0D0D0D !important;
+      border-top: 1px solid var(--border);
+    }
+
+    footer p, footer small { color: var(--text-muted) !important; font-size: 0.78rem; }
+
+    .footer-social .nav-link {
+      color: var(--text-muted) !important;
+      font-size: 1rem;
+      padding: 0.25rem 0.55rem;
+      transition: color 0.2s;
+    }
+
+    .footer-social .nav-link:hover { color: var(--red-primary) !important; }
+
+    /* ── Divider ──────────────────────────────────────── */
+    .section-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 0;
+    }
+
+    /* ── Scrollbar ────────────────────────────────────── */
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--red-primary); }
+  </style>
+</head>
+<body>
+
+  <!-- ── Navbar ──────────────────────────────────────── -->
+  <nav class="navbar navbar-expand-sm">
+    <div class="container-fluid px-4">
+
+      <a class="navbar-brand d-flex align-items-center text-decoration-none" href="#">
+        <img src="assets/img/logo.svg" alt="Logo" style="height:34px; width:auto;">
+        <span class="ms-2 d-none d-sm-inline">Mi Taller</span>
+      </a>
+
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+
+          <li class="nav-item">
+            <a class="nav-link" href="#inicio">
+              <i class="bi bi-house-door-fill"></i>Inicio
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#servicios">
+              <i class="bi bi-grid-1x2-fill"></i>Servicios
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link btn btn-red" href="login.html" style="display: inline-block; margin: 0.25rem 0.5rem;">
+              <i class="bi bi-box-arrow-in-right"></i>Acceder
+            </a>
+          </li>
+
+          <!-- Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button"
+               data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-layout-text-window-reverse"></i>Páginas
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="app/table.html">
+                  <i class="bi bi-ui-checks"></i>Tablas
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="galeria.html">
+                  <i class="bi bi-images"></i>Galería
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="nosotros.html">
+                  <i class="bi bi-people-fill"></i>Nosotros
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#contacto">
+              <i class="bi bi-envelope-fill"></i>Contacto
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── Carousel ────────────────────────────────────── -->
+  <section id="inicio" class="container py-4">
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="assets/img/car1.jpg" class="d-block w-100" alt="Los Angeles">
+        </div>
+        <div class="carousel-item">
+          <img src="assets/img/car2.jpg" class="d-block w-100" alt="Chicago">
+        </div>
+        <div class="carousel-item">
+          <img src="assets/img/car3.jpg" class="d-block w-100" alt="New York">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev" aria-label="Anterior">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next" aria-label="Siguiente">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ── Welcome ─────────────────────────────────────── -->
+  <section class="welcome-strip">
+    <div class="container">
+      <h2>Bienvenidos a <span>Mi Taller</span></h2>
+      <p>Diseño limpio y contenido organizado con Bootstrap.</p>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- ── Info columns ────────────────────────────────── -->
+  <section id="info" class="container py-5">
+    <div class="row g-3">
+      <div class="col-md-4">
+        <div class="info-card dark">
+          <h3>Column 1</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="info-card accent">
+          <h3>Column 2</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="info-card light">
+          <h3>Column 3</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- ── Services ────────────────────────────────────── -->
+  <section id="servicios" class="container py-5">
+    <h2 class="section-title text-center">Galería de Servicios</h2>
+    <p class="text-center section-subhead mb-5" style="color:var(--text-muted); font-size:0.84rem;">Soluciones diseñadas para cada necesidad</p>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="service-card">
+          <img src="assets/img/carsR.jpg" alt="Servicio 1">
+          <div class="service-card-body">
+            <h4>Servicio 1</h4>
+            <p>Experiencia moderna con atención personalizada.</p>
+            <a href="#" class="btn-red">Ver más</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="service-card">
+          <img src="assets/img/carsY.jpg" alt="Servicio 2">
+          <div class="service-card-body">
+            <h4>Servicio 2</h4>
+            <p>Soluciones prácticas con diseño atractivo.</p>
+            <a href="#" class="btn-red">Ver más</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="service-card">
+          <img src="assets/img/carsR.jpg" alt="Servicio 3">
+          <div class="service-card-body">
+            <h4>Servicio 3</h4>
+            <p>Calidad y estilo en cada proyecto.</p>
+            <a href="#" class="btn-red">Ver más</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="service-card">
+          <img src="assets/img/carsY.jpg" alt="Servicio 4">
+          <div class="service-card-body">
+            <h4>Servicio 4</h4>
+            <p>Presentación ordenada para tus ideas.</p>
+            <a href="#" class="btn-red">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- ── Collapse info ───────────────────────────────── -->
+  <section id="contacto" class="container py-5">
+    <h2 class="section-title">Información adicional</h2>
+    <p class="text-center section-subhead mb-4" style="color:var(--text-muted); font-size:0.84rem;">Haz clic en el botón para ver más detalles.</p>
+    <div class="text-center">
+      <button type="button" class="btn-outline-red"
+              data-bs-toggle="collapse" data-bs-target="#collapseInfo"
+              aria-expanded="true" aria-controls="collapseInfo">
+        Mostrar contenido
+      </button>
+    </div>
+    <div id="collapseInfo" class="collapse show mt-3">
+      <div class="card card-body">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- ── Contact form ────────────────────────────────── -->
+  <section class="form-section container py-5">
+    <h2 class="section-title">Contáctanos</h2>
+    <div class="row justify-content-center mt-4">
+      <div class="col-12 col-md-8 col-lg-5">
+        <form action="/action_page.php">
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email"
+                   placeholder="tu@correo.com" name="email">
+          </div>
+          <div class="mb-3">
+            <label for="pwd" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="pwd"
+                   placeholder="••••••••" name="pswd">
+          </div>
+          <div class="form-check mb-4">
+            <input class="form-check-input" type="checkbox" id="remember" name="remember">
+            <label class="form-check-label" for="remember">Recordarme</label>
+          </div>
+          <button type="submit" class="btn-red w-100 py-2">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ──────────────────────────────────────── -->
+  <footer role="contentinfo">
+    <div class="container py-4">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+          <p class="mb-0">© 2026 Mi Taller — Farid Cotera</p>
+        </div>
+        <div class="col-md-6">
+          <nav class="nav footer-social justify-content-center justify-content-md-end" aria-label="Redes sociales">
+            <a class="nav-link" href="https://facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <i class="bi bi-facebook" aria-hidden="true"></i>
+            </a>
+            <a class="nav-link" href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+              <i class="bi bi-twitter" aria-hidden="true"></i>
+            </a>
+            <a class="nav-link" href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <i class="bi bi-instagram" aria-hidden="true"></i>
+            </a>
+            <a class="nav-link" href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <i class="bi bi-linkedin" aria-hidden="true"></i>
+            </a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

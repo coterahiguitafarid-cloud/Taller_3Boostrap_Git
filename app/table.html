@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tablas</title>
+  <link rel="shortcut icon" href="../assets/img/logo.svg" type="image/x-icon">
+  <meta name="author" content="Farid Cotera">
+  <meta name="description" content="Taller 3 de maquetación web con navegación básica.">
+  <meta name="keywords" content="taller, maquetación, web, inicio, servicios, contacto">
+  <meta name="theme-color" content="#000000">
+  <meta name="MobileOptimized" content="width">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <div class="container-fluid">
+      <div class="navbar-brand d-flex align-items-center" aria-label="Mi Taller">
+        <img src="assets/img/logo.svg" alt="Logo" class="d-inline-block" style="height:40px; width:auto;">
+        <span class="ms-2 fw-bold">Mi Taller</span>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Alternar navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#inicio"><i class="bi bi-house-door-fill"></i> Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#servicios"><i class="bi bi-grid-1x2-fill"></i> Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#info"><i class="bi bi-info-circle-fill"></i> Info</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto"><i class="bi bi-envelope-fill"></i> Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-4">
+    <h2 class="mb-3">Inventario de Supermercado</h2>
+    <p class="text-muted">Lista detallada de productos alimenticios (Tabla de 10 columnas y 20 filas):</p>
+    
+    <table class="table table-bordered table-striped table-hover align-middle table-vertical-responsive">
+      <thead class="table-dark">
+        <tr>
+          <th># Code</th>
+          <th>Producto</th>
+          <th>Categoría</th>
+          <th>Marca</th>
+          <th>Contenido</th>
+          <th>Precio (COP)</th>
+          <th>Stock</th>
+          <th>Pasillo</th>
+          <th>Perecedero</th>
+          <th>Estado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="# Code">SG-001</td>
+          <td data-label="Producto">Arroz Blanco Prime</td>
+          <td data-label="Categoría">Granos</td>
+          <td data-label="Marca">Diana</td>
+          <td data-label="Contenido">1000 g</td>
+          <td data-label="Precio (COP)">$4.200</td>
+          <td data-label="Stock">150</td>
+          <td data-label="Pasillo">Pasillo 3</td>
+          <td data-label="Perecedero">No</td>
+          <td data-label="Estado"><span class="badge bg-success">Disponible</span></td>
+        </tr>
+        <tr>
+          <td data-label="# Code">SG-002</td>
+          <td data-label="Producto">Leche Entera Alquería</td>
+          <td data-label="Categoría">Lácteos</td>
+          <td data-label="Marca">Alquería</td>
+          <td data-label="Contenido">1100 ml</td>
+          <td data-label="Precio (COP)">$4.800</td>
+          <td data-label="Stock">85</td>
+          <td data-label="Pasillo">Pasillo 1 (Fríos)</td>
+          <td data-label="Perecedero">Sí</td>
+          <td data-label="Estado"><span class="badge bg-success">Disponible</span></td>
+        </tr>
+        <tr>
+          <td data-label="# Code">SG-003</td>
+          <td data-label="Producto">Aceite de Girasol</td>
+          <td data-label="Categoría">Aceites y Grasas</td>
+          <td data-label="Marca">Gourmet</td>
+          <td data-label="Contenido">900 ml</td>
+          <td data-label="Precio (COP)">$16.500</td>
+          <td data-label="Stock">42</td>
+          <td data-label="Pasillo">Pasillo 4</td>
+          <td data-label="Perecedero">No</td>
+          <td data-label="Estado"><span class="badge bg-success">Disponible</span></td>
+        </tr>
+        <tr>
+          <td data-label="# Code">SG-004</td>
+          <td data-label="Producto">Frijol Cargamanto</td>
+          <td data-label="Categoría">Granos</td>
+          <td data-label="Marca">Aburrá</td>
+          <td data-label="Contenido">500 g</td>
+          <td data-label="Precio (COP)">$5.600</td>
+          <td data-label="Stock">110</td>
+          <td data-label="Pasillo">Pasillo 3</td>
+          <td data-label="Perecedero">No</td>
+          <td data-label="Estado"><span class="badge bg-success">Disponible</span></td>
+        </tr>
+        <tr>
+          <td data-label="# Code">SG-005</td>
+          <td data-label="Producto">Pechuga de Pollo</td>
+          <td data-label="Categoría">Carnes</td>
+          <td data-label="Marca">S सागर (Avícola)</td>
+          <td data-label="Contenido">1000 g</td>
+          <td data-label="Precio (COP)">$18.900</td>
+          <td data-label="Stock">25</td>
+          <td data-label="Pasillo">Carnicería</td>
+          <td data-label="Perecedero">Sí</td>
+          <td data-label="Estado"><span class="badge bg-warning text-dark">Bajo Stock</span></td>
+        </tr>
+        <tr>
+          <td data-label="# Code">SG-006</td>
+          <td data-label="Producto">Café Sello Rojo</td>
+          <td data-label="Categoría">Café y Chocolate</td>
+          <td data-label="Marca">Sello Rojo</td>
+          <td data-label="Contenido">500 g</td>
+          <td data-label="Precio (COP)">$11.200</td>
+          <td data-label="Stock">95</td>
+          <td data-label="Pasillo">Pasillo 2</td>
+          <td data-label="Perecedero">No</td>
+          <td data-label="Estado"><span class="badge bg-success">Disponible</span></td>
+        </tr>
+        <tr>
+          <td data-label="# Code">SG-007</td>
+          <td data-label="Producto">Huevos AA x30</td>
+          <td data-label="Categoría">Lácteos y Huevos</td>
+          <td data-label="Marca">Santa Anita</td>
+          <td data-label="Contenido">30 und</td>
+          <td data-label="Precio (COP)">$16.000</td>
+          <td data-label="Stock">60</td>
+          <td data-label="Pasillo">Pasillo 1</td>
+          <td data-label="Perecedero">Sí</td>
+          <td data-label="Estado"><span class="badge bg-success">Disponible</span></td>
+        </tr>
+        <tr>
+          <td data-label="# Code">SG-008</td>
+          <td data-label="Producto">Pasta Spaguetti</td>
+          <td data-label="Categoría">Pastas y Harinas</td>
+          <td data-label="Marca">Doria</td>
+          <td data-label="Contenido">500 g</td>
+          <td data-label="Precio (COP)">$3.400</td>
+          <td data-label="Stock">200</td>
+          <td data-label="Pasillo">Pasillo 3</td>
+          <td data-label="Perecedero">No</td>
+          <td data-label="Estado"><span class="badge bg-success">Disponible</span></td>
+        </tr>
+        <tr>
+          <td data-label="# Code">SG-009</td>
+          <td data-label="Producto">Atún en Aceite Van Camp's</td>
+          <td data-label="Categoría">Enlatados</td>
+          <td data-label="Marca">Van Camp's</td>
+          <td data-label="Contenido">160 g</td>
+          <td data-label="Precio (COP)">$7.500</td>
+          <td data-label="Stock">140</td>
+          <td data-label="Pasillo">Pasillo 4</td>
+          <td data-label="Perecedero">No</td>
+          <td data-label="Estado"><span class="badge bg-success">Disponible</span></td>
+        </tr>
+        <tr>
+          <td data-label="# Code">SG-010</td>
+          <td data-label="Producto">Pan Tajado Blanco</td>
+          <td data-label="Categoría">Panadería</td>
+          <td data-label="Marca">Bimbo</td>
+          <td data-label="Contenido">450 g</td>
+          <td data-label="Precio (COP)">$6.900</td>
+          <td data-label="Stock">35</td>
+          <td data-label="Pasillo">Pasillo 5</td>
+          <td data-label="Perecedero">Sí</td>
+          <td data-label="Estado"><span class="badge bg-success">Disponible</span></td>
+        </tr>
+        <tr>
+          <td data-label="# Code">SG-011</td>
+          <td data-label="Producto">Queso Doble Crema</td>
+          <td data-label="Categoría">Lácteos</td>
+          <td data-label="Marca">Colanta</td>
+          <td data-label="Contenido">500 g</td>
+          <td data-label="Precio (COP)">$14.200</td>
+          <td data-label="Stock">18</td>
+          <td data-label="Pasillo">Pasillo 1 (Fríos)</td>
+          <td data-label="Perecedero">Sí</td>
+          <td data-label="Estado"><span class="badge bg-warning text-dark">Bajo Stock</span></td>
+        </tr>
+        <tr>
+          <td data-label="# Code">SG-012</td>
+          <td data-label="Producto">Azúcar Alta Pureza</td>
+          <td data-label="Categoría">Despensa</td>
+          <td data-label="Marca">Incauca</td>
+          <td data-label="Contenido">1000 g</td>
+          <td data-label="Precio (COP)">$4.600</td>
+          <td data-label="Stock">120</td>
+          <td data-label="Pasillo">Pasillo 2</td>
+          <td data-label="Perecedero">No</td>
+          <td data-label="Estado"><span class="badge bg-success">Disponible</span></td>
+        </tr>
+        <tr>
+          <td data-label="# Code">SG-013</td>
+          <td data-label="Producto">Lentejas Seleccionadas</td>
+          <td data-label="Categoría">Granos</td>
+          <td data-label="Marca">Nutresa</td>
+          <td data-label="Contenido">500 g</td>
+          <td data-label="Precio (COP)">$3.900</td>
+          <td data-label="Stock">88</td>
+          <td data-label="Pasillo">Pasillo 3</td>
+          <td data-label="Perecedero">No</td>
+          <td data-label="Estado"><span class="badge bg-success">Disponible</span></td>
+        </tr>
+        <tr>
+          <td data-label="# Code">SG-014</td>
+          <td data-label="Producto">Salsa de Tomate</td>
+          <td data-label="Categoría">Salsas y Aderezos</td>
+          <td data-label="Marca">Fruco</td>
+          <td data-label="Contenido">400 g</td>
+          <td data-label="Precio (COP)">$5.800</td>
+          <td data-label="Stock">75</td>
+          <td data-label="Pasillo">Pasillo 4</td>
+          <td data-label="Perecedero">No</td>
+          <td data-label="Estado"><span class="badge bg-success">Disponible</span></td>
+        </tr>
+        <tr>
+          <td data-label="# Code">SG-015</td>
+          <td data-label="Producto">Chocolate Soluble</td>
+          <td data-label="Categoría">Café y Chocolate</td>
+          <td data-label="Marca">Corona</td>
+          <td data-label="Contenido">500 g</td>
+          <td data-label="Precio (COP)">$9.300</td>
+          <td data-label="Stock">50</td>
+          <td data-label="Pasillo">Pasillo 2</td>
+          <td data-label="Perecedero">No</td>
+          <td data-label="Estado"><span class="badge bg-success">Disponible</span></td>
+        </tr>
+        <tr>
+          <td data-label="# Code">SG-016</td>
+          <td data-label="Producto">Sal Marina Finamente Molida</td>
+          <td data-label="Categoría">Despensa</td>
+          <td data-label="Marca">Refisal</td>
+          <td data-label="Contenido">1000 g</td>
+          <td data-label="Precio (COP)">$2.100</td>
+          <td data-label="Stock">180</td>
+          <td data-label="Pasillo">Pasillo 2</td>
+          <td data-label="Perecedero">No</td>
+          <td data-label="Estado"><span class="badge bg-success">Disponible</span></td>
+        </tr>
+        <tr>
+          <td data-label="# Code">SG-017</td>
+          <td data-label="Producto">Carne de Res Murillo</td>
+          <td data-label="Categoría">Carnes</td>
+          <td data-label="Marca">Ganadería Local</td>
+          <td data-label="Contenido">1000 g</td>
+          <td data-label="Precio (COP)">$26.000</td>
+          <td data-label="Stock">0</td>
+          <td data-label="Pasillo">Carnicería</td>
+          <td data-label="Perecedero">Sí</td>
+          <td data-label="Estado"><span class="badge bg-danger">Agotado</span></td>
+        </tr>
+        <tr>
+          <td data-label="# Code">SG-018</td>
+          <td data-label="Producto">Margarina Multipropósito</td>
+          <td data-label="Categoría">Aceites y Grasas</td>
+          <td data-label="Marca">La Fina</td>
+          <td data-label="Contenido">250 g</td>
+          <td data-label="Precio (COP)">$3.800</td>
+          <td data-label="Stock">64</td>
+          <td data-label="Pasillo">Pasillo 1 (Fríos)</td>
+          <td data-label="Perecedero">Sí</td>
+          <td data-label="Estado"><span class="badge bg-success">Disponible</span></td>
+        </tr>
+        <tr>
+          <td data-label="# Code">SG-019</td>
+          <td data-label="Producto">Harina de Maíz Precocida</td>
+          <td data-label="Categoría">Pastas y Harinas</td>
+          <td data-label="Marca">P.A.N.</td>
+          <td data-label="Contenido">1000 g</td>
+          <td data-label="Precio (COP)">$4.500</td>
+          <td data-label="Stock">210</td>
+          <td data-label="Pasillo">Pasillo 3</td>
+          <td data-label="Perecedero">No</td>
+          <td data-label="Estado"><span class="badge bg-success">Disponible</span></td>
+        </tr>
+        <tr>
+          <td data-label="# Code">SG-020</td>
+          <td data-label="Producto">Manzana Roja Importada</td>
+          <td data-label="Categoría">Frutas y Verduras</td>
+          <td data-label="Marca">Fruver del Campo</td>
+          <td data-label="Contenido">1000 g</td>
+          <td data-label="Precio (COP)">$9.800</td>
+          <td data-label="Stock">40</td>
+          <td data-label="Pasillo">Fruver</td>
+          <td data-label="Perecedero">Sí</td>
+          <td data-label="Estado"><span class="badge bg-success">Disponible</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

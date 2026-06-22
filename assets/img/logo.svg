@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="60" viewBox="0 0 200 60" role="img" aria-label="Logo Mi Taller">
+  <rect width="200" height="60" rx="8" fill="#0d6efd" />
+  <!-- Silueta humana estilizada -->
+  <g transform="translate(20,9)" fill="#fff" aria-hidden="true">
+    <!-- cabeza -->
+    <circle cx="22" cy="12" r="7" />
+    <!-- cuerpo (hombros + torso) -->
+    <path d="M8 32 L36 32 C40 32 42 36 40 40 L34 48 C32 51 28 52 22 52 C16 52 12 51 10 48 L4 40 C2 36 4 32 8 32 Z" fill="#fff" />
+  </g>
+  <!-- Texto a la derecha de la silueta -->
+  <text x="90" y="36" fill="#ffffff" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700">Mi Taller</text>
+</svg>
