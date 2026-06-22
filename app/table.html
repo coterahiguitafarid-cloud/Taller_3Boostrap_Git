@@ -15,26 +15,32 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
   <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/css/styleapp.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
-    <div class="container-fluid">
-      <div class="navbar-brand d-flex align-items-center" aria-label="Mi Taller">
-        <img src="assets/img/logo.svg" alt="Logo" class="d-inline-block" style="height:40px; width:auto;">
-        <span class="ms-2 fw-bold">Mi Taller</span>
-      </div>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Alternar navegación">
+<nav class="navbar navbar-expand-sm">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand d-flex align-items-center text-decoration-none" href="../index.html">
+        <img src="../assets/img/logo.svg" alt="Logo" style="height:34px; width:auto;">
+        <span class="ms-2 d-none d-sm-inline">Mi Taller</span>
+      </a>
+
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Menú">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+
+      <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#inicio"><i class="bi bi-house-door-fill"></i> Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="#servicios"><i class="bi bi-grid-1x2-fill"></i> Servicios</a></li>
-          <li class="nav-item"><a class="nav-link" href="#info"><i class="bi bi-info-circle-fill"></i> Info</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contacto"><i class="bi bi-envelope-fill"></i> Contacto</a></li>
+          <li class="nav-item">
+              <a class="nav-link" href="../index.html#inicio">
+              <i class="bi bi-arrow-left"></i>Volver
+            </a>
+          </li>
         </ul>
       </div>
     </div>

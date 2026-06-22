@@ -1,11 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Github</title>
-</head>
-<body>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        <link href="../assets/css/git.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <title>Guía GitHub ADSO</title>
     
+</head>
+
+<nav class="navbar navbar-expand-sm">
+    <div class="container-fluid px-4">
+                <a class="navbar-brand d-flex align-items-center text-decoration-none" href="../index.html">
+                <img src="../assets/img/logo.svg" alt="Logo" style="height:34px; width:auto;">
+        <span class="ms-2 d-none d-sm-inline">Mi Taller</span>
+      </a>
+
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+              <a class="nav-link" href="../index.html#inicio">
+              <i class="bi bi-arrow-left"></i>Volver
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<body>
+    <div class="guide-header">
+        <h1 class="guide-title">Guía GitHub ADSO</h1>
+        <div class="guide-nav">
+            <a href="#">Estructura</a>
+            <a href="#">GitHub</a>
+            <a href="#">Ramas</a>
+            <a href="#">GitHub Pages</a>
+            <a href="#">Evaluación</a>
+        </div>
+    </div>
+
+    <main class="container">
+
+        <section class="step-card">
+            <div class="step-header">
+                1. Estructura del proyecto según la imagen
+            </div>
+            <div class="step-body">
+                <p>El proyecto tiene una estructura organizada para un sitio web de varias páginas:</p>
+                <div class="code-block">taller3/
+├── app/
+│   ├── forms.html
+│   ├── tables.html
+│   └── github.html
+├── assets/
+│   ├── css/
+│   ├── img/
+│   └── js/
+├── index.html
+└── README.md</div>
+            </div>
+        </section>
+
+        <section class="step-card">
+            <div class="step-header">
+                2. Requisitos iniciales
+            </div>
+            <div class="step-body">
+                <ul class="step-list">
+                    <li>Tener una cuenta activa en GitHub.</li>
+                    <li>Tener instalado Git en el computador.</li>
+                    <li>Tener instalado Visual Studio Code.</li>
+                    <li>Abrir la carpeta del proyecto desde Visual Studio Code.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="step-card">
+            <div class="step-header">
+                3. Configuración de Git desde Visual Studio Code
+            </div>
+            <div class="step-body">
+                <p>Abre la terminal integrada de Visual Studio Code:</p>
+                <div class="menu-path">
+                    Menú: Terminal → New Terminal
+                </div>
+
+                <p>Configura tu nombre y correo:</p>
+                <div class="code-block">git config --global user.name "Tu Nombre"
+git config --global user.email "tu_correo@email.com"</div>
+
+                <p>Verifica la configuración:</p>
+                <div class="code-block">git config --global --list</div>
+            </div>
+        </section>
+
+        <section class="step-card">
+            <div class="step-header">
+                4. Inicializar Git en el proyecto
+            </div>
+            <div class="step-body">
+                <p>Ubícate en la carpeta raíz del proyecto, donde está el archivo <span class="highlight">index.html</span>, y ejecuta:</p>
+                
+                <div class="code-block">git init
+git add .
+git commit -m "Primer commit: estructura inicial del proyecto"</div>
+
+                <div class="alert-info">
+                    Este primer commit guarda la versión inicial del proyecto, incluyendo <span class="highlight">index.html</span>, <span class="highlight">forms.html</span>, <span class="highlight">tables.html</span> y la carpeta <span class="highlight">assets</span>.
+                </div>
+            </div>
+        </section>
+
+        <section class="step-card">
+            <div class="step-header">
+                5. Crear repositorio en GitHub
+            </div>
+            <div class="step-body">
+                <ol class="step-list-ordered">
+                    <li>Ingresar a GitHub.</li>
+                    <li>Hacer clic en <strong>New repository</strong>.</li>
+                    <li>Asignar un nombre al repositorio, por ejemplo: <span class="highlight">proyecto-bootstrap-adso</span>.</li>
+                    <li>Seleccionar si será público o privado.</li>
+                    <li>Crear el repositorio sin agregar README si el proyecto ya tiene archivos locales.</li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="step-card">
+            <div class="step-header">
+                6. Conectar proyecto local con GitHub
+            </div>
+            <div class="step-body">
+                <p>Copia la URL del repositorio creado y ejecuta:</p>
+                
+                <div class="code-block">git remote add origin https://github.com/usuario/proyecto-bootstrap-adso.git
+git branch -M main
+git push -u origin main</div>
+
+                <div class="alert-info">
+                    Cambia <span class="highlight">usuario</span> y <span class="highlight">proyecto-bootstrap-adso</span> por los datos reales del repositorio.
+                </div>
+            </div>
+        </section>
+
+    </main>
+
 </body>
 </html>
