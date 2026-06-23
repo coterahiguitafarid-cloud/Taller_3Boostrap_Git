@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tablas</title>
-  <link rel="shortcut icon" href="../assets/img/logo.svg" type="image/x-icon">
+  <link rel="shortcut icon" href="../assets/img/tablas.png" type="image/x-icon">
   <meta name="author" content="Farid Cotera">
   <meta name="description" content="Taller 3 de maquetación web con navegación básica.">
   <meta name="keywords" content="taller, maquetación, web, inicio, servicios, contacto">
@@ -15,16 +15,15 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
   <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
-  <link href="../assets/css/styleapp.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
 </head>
-<body>
+<body class="bg-light">
 
-<nav class="navbar navbar-expand-sm">
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
     <div class="container-fluid px-4">
-      <a class="navbar-brand d-flex align-items-center text-decoration-none" href="../index.html">
-        <img src="../assets/img/logo.svg" alt="Logo" style="height:34px; width:auto;">
+      <a class="navbar-brand d-flex align-items-center text-white text-decoration-none" href="../index.html">
+        <img src="../assets/img/tablas.png" alt="Logo" class="me-2" style="height:34px; width:auto;">
         <span class="ms-2 d-none d-sm-inline">Mi Taller</span>
       </a>
 
@@ -38,7 +37,7 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
               <a class="nav-link" href="../index.html#inicio">
-              <i class="bi bi-arrow-left"></i>Volver
+              <i class="bi bi-arrow-left"></i> Volver
             </a>
           </li>
         </ul>
@@ -46,11 +45,13 @@
     </div>
   </nav>
 
-  <div class="container mt-4">
-    <h2 class="mb-3">Inventario de Supermercado</h2>
-    <p class="text-muted">Lista detallada de productos alimenticios (Tabla de 10 columnas y 20 filas):</p>
-    
-    <table class="table table-bordered table-striped table-hover align-middle table-vertical-responsive">
+  <div class="container py-5">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h2 class="mb-3">Inventario de Supermercado</h2>
+        <p class="text-muted">Lista detallada de productos alimenticios (Tabla de 10 columnas y 20 filas):</p>
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped table-hover align-middle">
       <thead class="table-dark">
         <tr>
           <th># Code</th>

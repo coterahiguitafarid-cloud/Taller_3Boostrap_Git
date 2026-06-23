@@ -9,23 +9,22 @@
   <meta name="theme-color" content="#0A0A0A">
 
   <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/css/styleapp.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="icon" href="assets/img/logo.png" type="image/png">
+  <link rel="icon" href="assets/img/ducati-logo.png" type="image/png">
 
 
 </head>
-<body>
+<body class="bg-light">
 
   <!-- ── Navbar ──────────────────────────────────────── -->
-  <nav class="navbar navbar-expand-sm">
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
     <div class="container-fluid px-4">
 
-      <a>
-        <img src="assets/img/OIP.webp" alt="Logo" style="height:34px; width:auto;">
-        <span>Ducati-Motors</span>
+      <a class="navbar-brand d-flex align-items-center text-white text-decoration-none" href="#inicio">
+        <img src="assets/img/ducati-logo.png" alt="Logo" class="me-2" style="height:34px; width:auto;">
+        <span class="fw-bold">Ducati-Motors</span>
       </a>
 
       <button class="navbar-toggler" type="button"
@@ -49,8 +48,8 @@
             </a>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link btn btn-red" href="login.html" style="display: inline-block; margin: 0.25rem 0.5rem;">
+          <li class="nav-item ms-2">
+            <a class="btn btn-danger text-white" href="app/login.html">
               <i class="bi bi-box-arrow-in-right"></i>Acceder
             </a>
           </li>
@@ -101,13 +100,13 @@
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="assets/img/car1.jpg" class="d-block w-100" alt="Los Angeles">
+          <img src="assets/img/moto1.jpg" class="d-block w-100" alt="Los Angeles">
         </div>
         <div class="carousel-item">
-          <img src="assets/img/car2.jpg" class="d-block w-100" alt="Chicago">
+          <img src="assets/img/moto2.jpg" class="d-block w-100" alt="Chicago">
         </div>
         <div class="carousel-item">
-          <img src="assets/img/car3.jpg" class="d-block w-100" alt="New York">
+          <img src="assets/img/moto3.jpg" class="d-block w-100" alt="New York">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev" aria-label="Anterior">
@@ -120,133 +119,143 @@
   </section>
 
   <!-- ── Welcome ─────────────────────────────────────── -->
-  <section class="welcome-strip">
-    <div class="container">
-      <h2>Bienvenidos a <span>Ducati-Motors</span></h2>
-      <p>Diseño limpio y contenido organizado con Bootstrap.</p>
+  <section class="bg-white py-5">
+    <div class="container text-center">
+      <h2 class="display-6 fw-bold">Bienvenidos a <span class="text-danger">Ducati-Motors</span></h2>
+      <p class="text-muted mb-0">Diseño limpio y contenido organizado con Bootstrap.</p>
     </div>
   </section>
 
-  <hr class="section-divider">
+  <hr class="my-0 border-top border-secondary">
 
   <!-- ── Info columns ────────────────────────────────── -->
   <section id="info" class="container py-5">
-    <div class="row g-3">
+    <div class="row g-4">
       <div class="col-md-4">
-        <div class="info-card dark">
-          <h3>Column 1</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <h3 class="h6 text-uppercase text-secondary fw-bold mb-3">Legado y Pasión Italiana</h3>
+            <p class="text-muted">Ducati es una legendaria marca de motocicletas fundada en 1926 en Bolonia, Italia. Es mundialmente reconocida por su rica historia, su inconfundible estilo estético y sus múltiples victorias en campeonatos de alta competición como MotoGP y Superbike.</p>
+          </div>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="info-card accent">
-          <h3>Column 2</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <h3 class="h6 text-uppercase text-secondary fw-bold mb-3">Tecnología y Rendimiento</h3>
+            <p class="text-muted">El corazón de una Ducati reside en su motor. Se distinguen por incorporar tecnología de vanguardia, ofreciendo una aceleración rápida, una capacidad de respuesta excepcional y un sonido inigualable, características que emocionan a cualquier piloto experto.</p>
+          </div>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="info-card light">
-          <h3>Column 3</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <h3 class="h6 text-uppercase text-secondary fw-bold mb-3">Modelos Icónicos</h3>
+            <p class="text-muted">La marca ofrece un catálogo que combina la máxima adrenalina con un diseño aerodinámico excepcional. Entre sus familias más famosas se encuentran la extrema deportiva Panigale, la aventurera y versátil Multistrada, y la mítica Monster.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <hr class="section-divider">
+  <hr class="my-0 border-top border-secondary">
 
   <!-- ── Services ────────────────────────────────────── -->
   <section id="servicios" class="container py-5">
-    <h2 class="section-title text-center">Galería de Servicios</h2>
-    <p class="text-center section-subhead mb-5" style="color:var(--text-muted); font-size:0.84rem;">Soluciones diseñadas para cada necesidad</p>
+    <h2 class="text-center fw-bold text-uppercase mb-3">Galería de Servicios</h2>
+    <p class="text-center text-muted small mb-5">Soluciones diseñadas para cada necesidad</p>
     <div class="row g-4">
       <div class="col-md-6 col-lg-3">
-        <div class="service-card">
-          <img src="assets/img/carsR.jpg" alt="Servicio 1">
-          <div class="service-card-body">
-            <h4>Servicio 1</h4>
-            <p>Experiencia moderna con atención personalizada.</p>
-            <a href="#" class="btn-red">Ver más</a>
+        <div class="card h-100 shadow-sm border-0">
+          <img src="assets/img/pequeña.jpg" alt="Servicio 1" class="card-img-top object-fit-cover" style="height:180px;">
+          <div class="card-body">
+            <h4 class="h6 fw-bold">Servicio 1</h4>
+            <p class="text-muted small mb-3">Experiencia moderna con atención personalizada.</p>
+            <a href="#" class="btn btn-danger btn-sm">Ver más</a>
           </div>
         </div>
       </div>
       <div class="col-md-6 col-lg-3">
-        <div class="service-card">
-          <img src="assets/img/carsY.jpg" alt="Servicio 2">
-          <div class="service-card-body">
-            <h4>Servicio 2</h4>
-            <p>Soluciones prácticas con diseño atractivo.</p>
-            <a href="#" class="btn-red">Ver más</a>
+        <div class="card h-100 shadow-sm border-0">
+          <img src="assets/img/pequeña2.jpg" alt="Servicio 2" class="card-img-top object-fit-cover" style="height:180px;">
+          <div class="card-body">
+            <h4 class="h6 fw-bold">Servicio 2</h4>
+            <p class="text-muted small mb-3">Soluciones prácticas con diseño atractivo.</p>
+            <a href="#" class="btn btn-danger btn-sm">Ver más</a>
           </div>
         </div>
       </div>
       <div class="col-md-6 col-lg-3">
-        <div class="service-card">
-          <img src="assets/img/carsR.jpg" alt="Servicio 3">
-          <div class="service-card-body">
-            <h4>Servicio 3</h4>
-            <p>Calidad y estilo en cada proyecto.</p>
-            <a href="#" class="btn-red">Ver más</a>
+        <div class="card h-100 shadow-sm border-0">
+          <img src="assets/img/pequeña3.jpg" alt="Servicio 3" class="card-img-top object-fit-cover" style="height:180px;">
+          <div class="card-body">
+            <h4 class="h6 fw-bold">Servicio 3</h4>
+            <p class="text-muted small mb-3">Calidad y estilo en cada proyecto.</p>
+            <a href="#" class="btn btn-danger btn-sm">Ver más</a>
           </div>
         </div>
       </div>
       <div class="col-md-6 col-lg-3">
-        <div class="service-card">
-          <img src="assets/img/carsY.jpg" alt="Servicio 4">
-          <div class="service-card-body">
-            <h4>Servicio 4</h4>
-            <p>Presentación ordenada para tus ideas.</p>
-            <a href="#" class="btn-red">Ver más</a>
+        <div class="card h-100 shadow-sm border-0">
+          <img src="assets/img/pequeña5.jpg" alt="Servicio 4" class="card-img-top object-fit-cover" style="height:180px;">
+          <div class="card-body">
+            <h4 class="h6 fw-bold">Servicio 4</h4>
+            <p class="text-muted small mb-3">Presentación ordenada para tus ideas.</p>
+            <a href="#" class="btn btn-danger btn-sm">Ver más</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <hr class="section-divider">
+  <hr class="my-0 border-top border-secondary">
 
   <!-- ── Collapse info ───────────────────────────────── -->
   <section id="contacto" class="container py-5">
-    <h2 class="section-title">Información adicional</h2>
-    <p class="text-center section-subhead mb-4" style="color:var(--text-muted); font-size:0.84rem;">Haz clic en el botón para ver más detalles.</p>
+    <div class="text-center mb-4">
+      <h2 class="fw-bold text-uppercase mb-2">Información adicional</h2>
+      <p class="text-muted small mb-0">Haz clic en el botón para ver más detalles.</p>
+    </div>
     <div class="text-center">
-      <button type="button" class="btn-outline-red"
+      <button type="button" class="btn btn-outline-danger"
               data-bs-toggle="collapse" data-bs-target="#collapseInfo"
               aria-expanded="true" aria-controls="collapseInfo">
         Mostrar contenido
       </button>
     </div>
     <div id="collapseInfo" class="collapse show mt-3">
-      <div class="card card-body">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      <div class="card shadow-sm">
+        <div class="card-body text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
       </div>
     </div>
   </section>
 
-  <hr class="section-divider">
+  <hr class="my-0 border-top border-secondary">
 
   <!-- ── Contact form ────────────────────────────────── -->
-  <section class="form-section container py-5">
-    <h2 class="section-title">Contáctanos</h2>
-    <div class="row justify-content-center mt-4">
-      <div class="col-12 col-md-8 col-lg-5">
-        <form action="/action_page.php">
-          <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email"
-                   placeholder="tu@correo.com" name="email">
+  <section class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8 col-lg-6">
+        <div class="card shadow-sm border-0">
+          <div class="card-body">
+            <h2 class="h5 fw-bold text-center mb-4">Contáctanos</h2>
+            <form action="/action_page.php">
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="tu@correo.com" name="email">
+              </div>
+              <div class="mb-3">
+                <label for="pwd" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="pwd" placeholder="••••••••" name="pswd">
+              </div>
+              <div class="form-check mb-4">
+                <input class="form-check-input" type="checkbox" id="remember" name="remember">
+                <label class="form-check-label" for="remember">Recordarme</label>
+              </div>
+              <button type="submit" class="btn btn-danger w-100">Enviar</button>
+            </form>
           </div>
-          <div class="mb-3">
-            <label for="pwd" class="form-label">Contraseña</label>
-            <input type="password" class="form-control" id="pwd"
-                   placeholder="••••••••" name="pswd">
-          </div>
-          <div class="form-check mb-4">
-            <input class="form-check-input" type="checkbox" id="remember" name="remember">
-            <label class="form-check-label" for="remember">Recordarme</label>
-          </div>
-          <button type="submit" class="btn-red w-100 py-2">Enviar</button>
-        </form>
+        </div>
       </div>
     </div>
   </section>
